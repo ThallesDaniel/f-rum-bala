@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>    
+
+        <title> Livraria bala - Cadastro  </title>
+        <meta charset="uft-8">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
+        <link rel="manifest" href="../favicon_io/site.webmanifest">
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?&family=Fredericka+the+Great&family=Homemade+Apple&family=Poiret+Onet&family=Square+Peg');
+        </style>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+         rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <link rel="stylesheet" href="style.css"/>
+
+        <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+
+    </head>
+
+
+
+    <body>
+
+        <main class="col-9">
+
+            <section id="head2" class="col-7">
+
+                <span><a href="../index.html">Livraria bala</a></span>
+                <img src="../img/books2.png" alt="...">
+
+            </section>
+
+            <section class="col-4" id="sec-1">
+                <form action="../phpbala/controller/UsuarioController.php" method="post" enctype="multipart/form-data">
+                        
+                           <label for="" id="user"><img id="user1" src="img/user.png" alt=""></label>
+                           <input type="file" name="img_usuario" id="img_usuario" onchange="foto(this);">
+                            <br><br>
+                        
+                           <label for=""> Nome:</label>
+                           <input type="text" name="nome" id="nome">
+                            <br><br>
+                        
+                           <label for=""> Nome de usuário:</label>
+                           <input type="text" name="nome" id="nome">
+                            <br><br>
+                        
+                           <label for=""> Email:</label>
+                           <input type="email" name="email" id="email">
+                            <br><br>
+                        
+                           <label for=""> Telefone:</label>
+                           <input type="tel" name="telefone" id="telefone">
+                            <br><br>
+                        
+                           <label for=""> Data de nascimento:</label>
+                           <input type="date" name="nascimento" id="nascimento">
+                            <br><br>
+                        
+                           <label for=""> Senha:</label>
+                           <input type="password" name="senha" id="senha">
+                            <br><br><br>
+                        
+                           <button type="submit">Cadastrar</button><br><br><br>
+
+                </form>
+
+                <a  href="login.html">Voltar ao login</a>
+
+            </section>
+
+        </main>
+
+    </body>
+
+    <script src="logica.js"></script>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>    
+
+        <title> Livraria bala - Cadastro  </title>
+        <meta charset="uft-8">
+        
+        <link rel="apple-touch-icon" sizes="180x180" href="../favicon_io/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="../favicon_io/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="../favicon_io/favicon-16x16.png">
+        <link rel="manifest" href="../favicon_io/site.webmanifest">
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?&family=Fredericka+the+Great&family=Homemade+Apple&family=Poiret+Onet&family=Square+Peg');
+        </style>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+         rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+        <link rel="stylesheet" href="style_cad.css"/>
+
+        <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script>
+
+    </head>
+
+
+
+    <body>
+
+        <main class="col-9">
+
+            <section id="head2" class="col-7">
+
+                <span><a href="index.html">Livraria bala</a></span>
+                <img src="img/books2.png" alt="...">
+
+            </section>
+
+            <section class="col-4" id="sec-1">
+                <form action="index.html" method="post">
+                        
+                           <label for="" id="capa"><img id="capa1" src="img/books.png" alt=""></label>
+                           <input type="file" name="img_livro" id="img_livro" onchange="foto(this);">
+                            <br><br>
+                        
+                           <label for=""> Título:</label>
+                           <input type="text" name="titulo" id="titulo">
+                            <br><br>
+                        
+                           <label for=""> Autor:</label>
+                           <input type="text" name="autor" id="autor">
+                            <br><br>
+
+                           <label for=""> Editora:</label>
+                           <input type="text" name="editora" id="editora">
+                            <br><br>
+                        
+                           <label for=""> Data de publicação:</label>
+                           <input type="text" name="data_pub" id="data_pub">
+                            <br><br>
+                        
+                           <label for=""> Gênero:</label>
+                           <input type="text" name="genero" id="genero">
+                            <br><br>
+                        
+                           <label for=""> Sinopse:</label>
+                           <textarea name="sinopse" id="sinopse" cols="30" rows="7" maxlength="350"></textarea>
+                            <br><br><br>
+                        
+                           <button type="submit">Enviar</button><br><br><br>
+
+                </form>
+
+            </section>
+
+        </main>
+
+    </body>
+
+    <script src="logica.js"></script>
+
+</html>

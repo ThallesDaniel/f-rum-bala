@@ -1,0 +1,88 @@
+<?php 
+
+session_start();
+
+require_once('../../config/Conexao.php');
+require_once('../../dao/UserDao.php');
+require_once('../../model/Usuario.php');
+
+//instancia as classes
+$usuario = new Usuario();
+$userdao = new UserDao();
+
+$login = new UserDao();
+
+$id = $_SESSION['user_session'];
+
+if(!$login->checkLogin()|| $id != 1) {
+    header("Location: ../login");
+}
+
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title> Cadastrar livro </title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <script type="text/javascript">
+   	
+        var mostrarImg = function(event) {
+            var ler = new FileReader();
+            ler.onload = function(){
+                var mostrar = document.getElementById('mostrar');
+                mostrar.src = ler.result;
+            }
+        ler.readAsDataURL(event.target.files[0]);
+        }
+        
+    </script>
+ 
+    <style type="text/css">
+        
+         #mostrar {
+             width: 140px;
+             height: 120px;
+             margin: 10px;
+             border: 1px dashed #CCC;
+         }
+ 
+    </style>
+</head>
+<body>
+    
+    <h2> Cadastrar livro </h2>
+
+    <fieldset style="border:3px solid #098; width:600px;">
+        <legend style="font-weight: bolder; font-size: 18px;"> Informe os dados do produto </legend>
+            <form action="../../controller/LivroController.php" method="post" enctype="multipart/form-data" name="cad">
+              
+            <input type="text" id="titulo" name="titulo" required />
+                <br/> <br/>
+                <label> Editora: </label>
+                <input type="text" id="editora" name="editora" required />
+                <br/> <br/>
+                <label> Autor: </label>
+                <input type="text" id="autor" name="autor"  required />
+                <br/> <br/>
+                <label> Data de publicação: </label>
+                <input type="date" id="data_pub" name="data_pub"  required />
+                <br/> <br/> 
+                <label> genero: </label>
+                <input type="text" id="genero" name="genero" required />
+                <br/> <br/>
+                <label> Sinopse : </label>
+                <input type="text" id="sinopse" name="sinopse" required />
+                <br/> <br/>
+                <label> Imagem: </label> <br/>
+                <img id="mostrar" alt=""> <br/>
+                <input type="file" name="img_livro" id="img_livro" required onchange="mostrarImg(event)">
+                <br/> <br/>
+                <input type="submit" id="cadastrar" name="cadastrar" value="Cadastrar" />
+                <button> <a href="../../" style="text-decoration:none;"> VOLTAR </a> </button>
+    </fieldset>
+
+</body>
+</html>

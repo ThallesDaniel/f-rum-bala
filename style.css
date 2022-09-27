@@ -1,0 +1,323 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    background-image: url(img/bg.jpg); 
+    background-attachment: fixed;
+    background-size: 55% 100%;
+}
+
+::-webkit-scrollbar{
+    width: 12px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: rgba(252, 235, 160, 0.5);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(207, 174, 143);
+    border-radius: 5px;
+}
+
+header {
+    background-color: rgb(190, 231, 255);
+    margin: 0 auto;
+    height: 25vh;
+}
+
+#head1{
+    float: left;
+    margin-top: 10%;
+    margin-left: 5%;
+    cursor: pointer;
+}
+
+#head2{
+    float: right;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 55pt;
+    margin-right: 15%;
+    margin-top: 40px;
+}
+
+
+section > img {
+    width: 120px;
+    height: 120px;
+
+}
+
+#head3{
+    float: left;
+    height: 30%;
+    background-image: url(img/user.png);
+    background-size: 60% 60%;
+    background-repeat: no-repeat;
+    margin-top: 10%;
+    cursor: pointer;
+}
+
+
+nav{
+    position: absolute;
+    top: 18%;
+    background-color: rgba(149, 199, 255, 0.97);
+    display: none;
+}
+
+nav > ul > li ul > li{
+    font-size: 13pt;   
+}
+
+li > a{
+    text-decoration: none;
+    color: #000;
+}
+
+main {
+    height: 200vh;
+    margin: 0 auto;
+    background-color: rgb(190, 231, 255);
+}
+
+
+article {
+    height: auto;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+#pesquisa{
+    height: auto;
+    padding-top: 7%;
+}
+
+
+#fila2{
+    margin-top: 38%;
+}
+
+#caixa{
+    height: 450px;
+    margin-top: 5%;
+}
+
+#poemas{
+    margin: 0 auto;
+    height: 100%;
+    background-color: #01663F;
+    border: ridge #D8BB75 15px;
+    font-family: 'Square Peg', cursive;    
+    color: rgb(223, 223, 223);
+    font-size: 80pt;
+    text-align: center;
+}
+
+article > a{
+    text-decoration: none;
+}
+
+.mais{
+    margin-top: 5%;
+    margin-left: 13%;
+    height: 10%;
+}
+
+.ver-mais{
+    margin-left: 75%;
+}
+
+.card{
+    width: 60%;
+    height: auto;
+}
+
+.card-img-top{
+    width: 280px;
+    height: 300px;
+}
+
+.top{
+    width: 100%;
+    height: auto;
+}
+
+.conteudo{
+    height: 20%;
+}
+
+.livro{
+    margin: 0 auto;
+    margin-left: 12%;
+    margin-top: 2%;
+}
+
+.livro1{
+    float: left;
+}
+
+.livro2{
+    float: left;
+}
+
+.livro3{
+    float: right;
+}
+
+
+#lupa{
+    border-radius: 5px;
+    font-size: 15pt;
+    padding: 2%;
+}
+
+#cxpesquisa {
+    border-radius: 5px;
+    font-size: 18pt;
+}
+
+footer {
+    background-color: rgb(190, 231, 255);
+    margin: 0 auto;
+    margin-top: 10px;
+    padding: 2%;
+}
+
+#contato{
+    float: left;
+    margin-right: 230px;
+}
+/*-----------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 1371px) {
+
+    #head2{
+        width: 63%;
+    }
+
+    section > img { 
+        width: 20%;
+        height: 20%;
+        margin-left: 820px;
+    }
+
+
+}
+
+
+@media only screen and (max-width: 1139px) {
+
+
+    .card-img-top{ /*os livros*/
+        width: 28%;
+        height: 200px;
+        margin-top: -1%;
+    }
+
+
+    section > img { /*logo livrinho*/
+        width: 20%;
+        height: 20%;
+        margin-bottom: 10px;
+    }
+
+    
+
+    #head3{ /*login*/
+        height: 30%;
+        background-size: 60% 60%;
+        background-repeat: no-repeat;
+        margin-top: 10%;
+    }
+
+
+
+    #head2{ /*nome*/
+        font-size: 40pt;
+        margin-right: 10%;
+        margin-top: 7%;
+       
+    }
+
+    #head1{ /* 3 coisas */
+        float: left;
+        margin-top: 10%;
+        margin-left: 5%;
+    }
+    
+
+    .card{
+        width: 65%;
+        height: 50%;
+        margin-bottom: 15%;
+        /* height: 60%; */
+    }
+
+    #caixa{ /*quadro*/
+        height: 28%;
+        width: 60%;
+        margin-top: 5%;
+    }
+ 
+  }
+
+  
+  
+
+  @media only screen and (max-width: 1310px) {
+
+    main{
+        height: 180vh;
+    }
+
+    .card-img-top{ /*os livros*/
+        width: 20%;
+        height: 20%;
+        margin-top: 1%;
+    }
+
+
+    section > img { /*logo livrinho*/
+        width: 15%;
+        height: 40%;
+        margin-bottom: 20px;
+    }
+
+  }
+
+  @media only screen and (max-width: 1290px) {
+
+
+    section > img { /*logo livrinho*/
+        width: 15%;
+        height: 40%;
+        margin-bottom: 10px;
+    }
+
+
+    
+  }
+
+  @media only screen and (max-width: 1061px) {
+
+    header{
+        height: 18vh;
+    }
+
+    #caixa{
+        width: 70%;
+    }
+
+    #pesquisa{
+        width: 55%;
+    }
+  }
+
+
+
+  
+

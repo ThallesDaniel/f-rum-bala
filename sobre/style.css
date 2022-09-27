@@ -1,0 +1,104 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    background-image: url(../img/bg.jpg); 
+    background-attachment: fixed;
+    background-size: 55% 100%;
+}
+
+::-webkit-scrollbar{
+    width: 12px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: rgba(252, 235, 160, 0.5);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(207, 174, 143);
+    border-radius: 5px;
+}
+
+header {
+    background-color: rgb(190, 231, 255);
+    margin: 0 auto;
+    height: 25vh;
+}
+
+#head1{
+    float: left;
+    margin-top: 10%;
+    margin-left: 5%;
+    cursor: pointer;
+}
+
+#head2{
+    float: right;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 55pt;
+    margin-right: 15%;
+    margin-top: 40px;
+}
+
+span > a{
+    text-decoration: none;
+    color: #000;
+}
+
+span > a:hover{
+    color: #000;
+}
+
+section > img {
+    width: 120px;
+    height: 120px;
+}
+
+#head3{
+    float: left;
+    height: 30%;
+    background-image: url(../img/user.png);
+    background-size: 60% 60%;
+    background-repeat: no-repeat;
+    margin-top: 10%;
+    cursor: pointer;
+}
+nav{
+    position: absolute;
+    top: 18%;
+    background-color: rgba(149, 199, 255, 0.97);
+    display: none;
+}
+
+nav > ul > li ul > li{
+    font-size: 13pt;   
+}
+
+li > a{
+    text-decoration: none;
+    color: #000;
+}
+
+main {
+    height: 73vh;
+    margin: 0 auto;
+    margin-top: 10px;
+    background-color: rgb(190, 231, 255);
+    font-family: 'Poiret One', cursive;
+}
+
+main > section {
+    margin: 0 auto;
+    padding-top: 10%;
+    text-align: justify;
+    font-size: 13pt;
+}
+
+section > p{
+    padding-top: 3%;
+}

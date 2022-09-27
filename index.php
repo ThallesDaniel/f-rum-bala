@@ -1,0 +1,238 @@
+<?php 
+
+session_start();
+
+require_once('../../config/Conexao.php');
+require_once('../../dao/LivroDao.php');
+require_once('../../dao/UserDao.php');
+require_once('../../model/Livro.php');
+
+//instancia as classes
+$livro = new Livro();
+$livrodao = new LivroDao();
+
+$login = new UserDao();
+
+if(!$login->checkLogin()) {
+    header("Location: ../login");
+}
+
+?>
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>    
+        <title> Livraria bala - Início  </title>
+        <meta charset="uft-8">
+        <link rel="stylesheet" href="style.css"/>
+        <style>
+            @import url('https://fonts.googleapis.com/css2?&family=Fredericka+the+Great&family=Homemade+Apple&family=Poiret+Onet&family=Square+Peg');
+        </style>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css"
+         rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    </head>
+
+
+
+    <body>
+
+        <header class="col-9">
+
+            <section id="head1" class="col-1" onclick="nav()">
+                <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="#000" class="bi bi-list" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
+                </svg>
+            </section>
+
+            <nav class="col-2" id="list_nav">
+
+                <ul type="disc">
+                    <li><a href=""><h5>Gêneros</h5></a>
+                        <ul type="none">
+                            <li><a href=""> Ação</a></li>
+                            <li><a href=""> Drama</a></li>
+                            <li><a href=""> Aventura</a></li>
+                            <li><a href=""> Suspense</a></li>
+                            <li><a href=""> Terror</a></li>
+                            <li><a href=""> Mistério</a></li>
+                            <li><a href=""> Ficção</a></li>
+                            <li><a href=""> Romance</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="sobre/index.html"><h5>Sobre nós</h5></a></li>
+                    <li><a href="quadro/index.html"><h5>Quadro negro</h5></a></li>
+                    <li><a href="cad_livros.html"><h5>Cadastrar novo livro</h5></a></li>
+                </ul>
+               
+            </nav>
+
+
+            <section id="head2" class="col-7">
+
+                <span>Livraria bala</span>
+                <img src="img/books2.png" alt="...">
+
+            </section>
+
+            <a href="./cadastro/login.html">
+                <section id="head3" class="col-1">
+
+                </section>  
+            </a>
+
+        </header>
+
+
+        <main class="col-9">
+
+
+            <article class="col-5" id="pesquisa">
+                <div class="input-group">                    
+                    <input type="text" class="form-control" id="cxpesquisa" placeholder="Digite aqui o nome do livro">
+                    <button type="button" id="lupa">Buscar</button>
+                  </div>
+            </article>
+
+            <article class="col-7" id="caixa">
+                <a href="./quadro/index.html">
+                    <section id="poemas">
+                        <p>Participe do nosso</p>
+                        <p> quadro negro!</p>
+                    </section>
+                </a>
+            </article>
+
+            <article class="col-12">
+
+                <section class="mais col-9">
+                    <span>Mais recomendados</span>
+                    <span class="ver-mais">Veja mais</span>
+                </section>
+
+                <div class="livro">
+                <?php foreach ($livrodao->listar() as $livro) : ?>
+                <section class="livro1 col-4">
+
+
+                    <div class="card" >
+                        <img src="Capas/Eu estive aqui.jpg" class="card-img-top" alt="...">
+                          <h5 class="card-title">Título</h5>
+                          <p class="card-text">Autor</p>
+                    </div>
+                    
+                </section>
+
+                <section class="livro2 col-4">
+
+                    <a href="./livros/index.html"><div class="card" >
+                        <img src="<?= $livro->getImg_livro() ?>" class="card-img-top" alt="...">
+                          <h5 class="card-title"><?= $livro->getTitulo() ?></h5>
+                          <p class="card-text"><?= $livro->getAutor() ?></p>
+                    </div></a>
+
+                </section>
+
+                <section class="livro3 col-4">
+
+                    <div class="card" >
+                        <img src="Capas/elevador 16.jpg" class="card-img-top" alt="...">
+                          <h5 class="card-title"><?= $livro->getTitulo() ?></h5>
+                          <p class="card-text"><?= $livro->getAutor() ?></p>
+                    </div>
+
+                </section>
+
+                </div>
+
+            </article> 
+            
+            <article class="col-12 fileira" id="fila2">                  
+
+                <section class="mais col-9">
+                    <span>Mais recomendados</span>
+                    <span class="ver-mais">Veja mais</span>
+                </section>
+
+                <div class="livro">
+
+                <section class="livro1 col-4">
+
+
+                    <div class="card" >
+                        <img src="Capas/Eu estive aqui.jpg" class="card-img-top" alt="...">
+                          <h5 class="card-title"><?= $livro->getTitulo() ?></h5>
+                          <p class="card-text"><?= $livro->getAutor() ?></p>
+                    </div>
+                    
+                </section>
+
+                <section class="livro2 col-4">
+
+                    <div class="card" >
+                        <img src="Capas/O arroz de Palma.jpg" class="card-img-top" alt="...">
+                          <h5 class="card-title"><?= $livro->getTitulo() ?></h5>
+                          <p class="card-text"><?= $livro->getAutor() ?></p>
+                    </div>
+
+                </section>
+
+                <section class="livro3 col-4">
+
+                    <div class="card" >
+                        <img src="Capas/elevador 16.jpg" class="card-img-top" alt="...">
+                          <h5 class="card-title"><?= $livro->getTitulo() ?></h5>
+                          <p class="card-text"><?= $livro->getAutor() ?></p>
+                    </div>
+
+                </section>
+                <?php endforeach ?>
+                </div>
+                    
+            </article>
+         
+
+        </main>
+
+        <footer class="col-9">
+
+            <table id="contato">
+
+            <tr align="justify">
+                <td align="center" >
+            <P>Entre em contato conosco: </P>
+            <p> E-mail: livrariabala@gmail.com </p>
+            <P> Instagram: @livraria_bala</P>    
+                
+             </td>
+           
+
+            </tr>
+            
+        </table>
+
+            <table>
+                <tr>
+                    <td> WhatsApp: </td> 
+                </tr>
+                <tr>
+                    <td>(31) 99614-4663 - Carolina Clara </td>
+                </tr>
+                <tr>
+                    <td>(31) 99796-0676 - Henrique Lopes </td>
+                </tr>
+                <tr>
+                    <td>(31) 97250-6905 - Laura Moreira </td>
+                </tr>
+                <tr>
+                    <td>(31) 99851-8179 - Thalles Daniel </td>
+                </tr>
+            </table>
+
+        </footer>
+
+
+    </body>
+
+    <script src="logica.js"></script>
+
+</html>

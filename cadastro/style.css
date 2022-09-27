@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+    text-decoration: none;
+}
+
+body {
+    background-image: url(../img/bg.jpg); 
+    background-attachment: fixed;
+    background-size: 55% 100%;
+}
+
+::-webkit-scrollbar{
+    width: 12px;
+}
+
+::-webkit-scrollbar-track{
+    background-color: rgba(252, 235, 160, 0.5);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: rgb(207, 174, 143);
+    border-radius: 5px;
+}
+
+main {
+    background-color: rgb(190, 231, 255);
+    margin: 0 auto;
+    height: 100vh;
+}
+
+#head2{
+    float: right;
+    font-family: 'Fredericka the Great', cursive;
+    font-size: 55pt;
+    margin-right: 15%;
+    margin-top: 40px;
+}
+
+main > section {
+    margin: 0 auto;
+}
+
+span > a{
+    text-decoration: none;
+    color: #000;
+}
+
+span > a:hover{
+    color: #000;
+}
+
+#sec-1{
+    padding-top: 15%;
+    margin: 0 auto;
+}
+
+form{
+    background-color: rgba(255, 255, 255, 0.25);
+    padding:5%;
+}
+
+section > img {
+    width: 120px;
+    height: 120px;
+}
+
+label{
+    font-size: 13pt;
+}
+
+input{
+    border-bottom: #000 1px solid;
+    background-color: transparent;
+    float: right;
+    width: 50%;
+    outline: none;
+}
+
+input[type=file] {
+    color:transparent;
+    border: none;
+    position: absolute;
+    top: 33%;
+    left: 50.4%;
+    width: 100px;
+}
+
+.inp-l{
+    width: 70%;
+}
+
+::-webkit-file-upload-button{
+    background-color: rgb(255, 255, 255);
+    background-image: url(img/camera.png);
+    background-size: 100% 100%;
+    color: rgba(255, 255, 255, 0);
+    border: 1px solid rgb(32, 32, 32);
+    border-radius: 100%;
+    width: 30px;
+    cursor: pointer;
+}
+
+label > img{
+    width: 100px;
+    height: 100px;
+    border: 1px rgb(0, 0, 0) solid;
+    border-radius: 100%;
+    background-color: rgb(255, 255, 255);
+    margin-left: 160%;
+}
+
+button[type=submit]{
+    width: 120px;
+    height: 60px;
+    background-color: rgb(255, 255, 255);
+    margin-left: 35%;
+    border-radius: 15px;
+}
+
+section > a {
+    position: absolute;
+    text-decoration: none;
+    left: 47%;
+    top: 79%;
+    color: rgb(94, 136, 252);
+}
+
+#link-login{
+    top: 58%;
+    left: 47.4%;
+}
+
+section > a:hover{
+    text-decoration: underline;
+}
+
