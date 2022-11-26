@@ -2,10 +2,10 @@
 
 session_start();
 
-require_once('../../config/Conexao.php');
-require_once('../../dao/LivroDao.php');
-require_once('../../dao/UserDao.php');
-require_once('../../model/Livro.php');
+require_once('./phpbala/config/Conexao.php');
+require_once('./phpbala/dao/LivroDao.php');
+require_once('./phpbala/dao/UserDao.php');
+require_once('./phpbala/model/livro.php');
 
 //instancia as classes
 $livro = new Livro();
@@ -14,7 +14,7 @@ $livrodao = new LivroDao();
 $login = new UserDao();
 
 if(!$login->checkLogin()) {
-    header("Location: ../login");
+    header("Location: ./cadastro/login.html");
 }
 
 ?>
@@ -23,7 +23,7 @@ if(!$login->checkLogin()) {
 <html lang="pt-br">
     <head>    
         <title> Livraria bala - Início  </title>
-        <meta charset="uft-8">
+        <meta charset="utf-8">
         <link rel="stylesheet" href="style.css"/>
         <style>
             @import url('https://fonts.googleapis.com/css2?&family=Fredericka+the+Great&family=Homemade+Apple&family=Poiret+Onet&family=Square+Peg');
